@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Calculator </title>
+  <link href="calc.css" rel="stylesheet" type="text/css">
+  <script src="calc1.js" type="text/javascript"></script>
+</head>
+<body>
+  <div style="border: 5px solid black; width: 500px; height: 800px; border-radius:10%; position:relative; left: 150px; top: 100px">
+
+    <button id="display"></button> <!--- DISPLAY --->
+    <button onclick="math(6)" id="clear_all" type="button" > C/E </button>
+
+    <div> <!--- All the operator symbols --->
+        <button onclick="math(1)" type="button" class="operator add" > + </button>
+        <button onclick="math(2)" type="button" class="operator subtract" > - </button>
+        <button onclick="math(3)" type="button" class="operator multiply" > * </button>
+        <button onclick="math(4)" type="button" class="operator divide" > / </button>
+        <button onclick="math(5)" type="button" class="operator equal" > = </button>
+        <button onclick="math(10)"> TESTING</button>
+      </div>
+
+    <div> <!---Button numbers --->
+          <button type="button" onclick="number(1)" class="numbutton one"> 1 </button>
+          <button type="button" onclick="number(2)" class="numbutton two"> 2 </button>
+          <button type="button" onclick="number(3)" class="numbutton three"> 3 </button>
+          <button type="button" onclick="number(4)" class="numbutton four"> 4 </button>
+          <button type="button" onclick="number(5)" class="numbutton five"> 5 </button>
+          <button type="button" onclick="number(6)" class="numbutton six"> 6 </button>
+          <button type="button" onclick="number(7)" class="numbutton seven"> 7 </button>
+          <button type="button" onclick="number(8)" class="numbutton eight"> 8 </button>
+          <button type="button" onclick="number(9)" class="numbutton nine"> 9 </button>
+      </div>
+</div>
+
+</body>
+
+<script>
+  var value = [0]
+    var value1 = []
+    var n = 0;
+    var total = 0;
+    var num = "";
+    var g = 0; /* Setting all variables */
+
+    document.getElementById("display").innerHTML = value;
+
+    function number(a) {
+      g = a
+      value.push(g)
+    }
+
+    function math(z) {
+      document.getElementById("display").innerHTML = value;
+
+      if (z==1) {
+        value.push("+")
+        n = value.indexOf("+");
+        var b = n-1
+        for (i=1; i < n; i++) {
+            num = num.concat(value[b].toString());
+            b -= 1;
+            }
+            num = parseInt(num.split("").reverse().join(""));
+        total += num
+        document.getElementById("display").innerHTML = num + "+"; /* Getting first number*/
+
+          }
+          value1 = value.slice(n+1,value.length)
+          for (i=0; i< value1.length; i++) {
+            num = ""
+            num += value1[i]
+          }
+          total += parseInt(num)
+      if (z==2) {
+        document.getElementById("display").innerHTML = value1;
+      }
+      if (z==3) {
+        value *= g
+      }
+      if (z==4) {
+        value /= g
+      }
+      if (z==5){
+
+        document.getElementById("display").innerHTML = value;
+      } else if (z==6) { /* CLEAR */
+          value = [0];
+      }
+
+      }
+      /* for plus: sum = value[n-1] + value[n+1]
+       2 digit numbers are joined by elements of list not separated by operator */
+
+</script> 
+
+
+
+
+
+
+
+</html>

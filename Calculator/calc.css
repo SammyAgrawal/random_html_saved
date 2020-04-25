@@ -1,0 +1,100 @@
+h {
+  color:blue;
+  font-size: 32px;
+}
+#display {
+  height: 75px;
+  width: 400px;
+  position: absolute;
+  margin: 50px 40px;
+  font-size: 32px;
+}
+
+#clear_all {
+  height: 85px;
+  width: 300px;
+  position: absolute;
+  top: 170px;
+  left: 40px;
+  background-color: black;
+  color:white;
+}
+
+.operator {
+  height: 80px;
+  width: 80px;
+  background: rgb(275, 166, 0);
+  font-size: 32px;
+  color:white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.add {
+  top: 180px;
+  left: 370px;
+}
+.subtract {
+  top: 280px;
+  left: 370px;
+}
+.multiply {
+  top: 380px;
+  left: 370px;
+}
+.divide {
+  top: 480px;
+  left: 370px;
+}
+.equal {
+  top: 580px;
+  left: 370px;
+}
+
+.numbutton {
+
+    height: 80px;
+    width: 80px;
+    background: black;
+    font-size: 32px;
+    color:white;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.one {
+  top: 300px;
+  left: 50px;
+}
+.two {
+    top: 300px;
+    left: 150px;
+}
+.three {
+  top: 300px;
+  left: 250px;
+}
+.four {
+  top: 400px;
+  left: 50px;
+}
+.five {
+  top: 400px;
+  left: 150px;
+}
+.six {
+  top: 400px;
+  left: 250px;
+}
+.seven {
+  top: 500px;
+  left: 50px;
+}
+.eight {
+  top: 500px;
+  left: 150px;
+}
+.nine {
+  top: 500px;
+  left: 250px;
+}

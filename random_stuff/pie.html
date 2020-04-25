@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Berkshire Hathaway Shoes</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="logic.js" type="text/javascript">
+//This would contain all of the code which takes the structure and circle divs, and turns them into the circular navigation interface like the website/drawings we shared.
+</script>
+<script src="structure.js" type="text/javascript">
+//This would define all of the relations between the circles (e.g. "Home" links to "About", "Products", "Careers", etc.
+//In the actual project this will be in a separate file (structure.js), but in the mockup I put the code here so I could send it easier
+let graph = {
+  "home": [
+    "about",
+    "products",
+    "events",
+    "contact"
+  ],
+  "about": [
+    ...
+  ],
+  "products": [
+    "shoes",
+    ...
+  ],
+  "events": [
+    "hackathon",
+    ...
+  ],
+  "contact": [
+    ...
+  ],
+  "shoes": [
+    "running",
+    "basketball",
+    "fancy",
+    "boots",
+    "slippers"
+  ],
+  ...
+}
+</script>
+</head>
+<body>
+
+<!-- Each of these divs corresponds to a circle. The circles which will be shown under and can be "navigated to" are defined in structure.js -->
+<div id="home">
+<h1>Berkshire Hathaway Shoe Holdings</h1>
+<img src="logo.png" />
+<p>Summary...</p>
+</div>
+
+<div id="about">
+<h1>About Us</h1>
+<p>Paragraph ...</p>
+</div>
+
+<div id="products">
+<h1>Products</h1>
+<p>Paragraph ...</p>
+<img src="generic-shoe.png" />
+</div>
+
+<div id="events">
+<h1>Events</h1>
+<h2>Our upcoming events are...</h2>
+<ul>
+<li>Circular Navigation Hackathon</li>
+<li>...</li>
+</ul>
+</div>
+
+<div id="contact">
+<h1>Contact Us</h1>
+<p><b>Email</b> ...</p>
+<p><b>Phone</b> ...</p>
+<p><b>Location</b> ...</p>
+<embed>Google Map</embed>
+</div>
+
+<div id="shoes">
+<h1>Shoes</h1>
+<p>We sell a variety of shoes, ...</p>
+<img src="shoe.png" />
+</div>
+
+</body>
+</html>

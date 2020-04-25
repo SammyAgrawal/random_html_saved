@@ -1,0 +1,64 @@
+</!DOCTYPE html>
+<html>
+<head>
+    <title>CircNavHack</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="circnav.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class = "shoeslideshow">
+  <!--Mens Athletic Shoes-->
+  <div class="shoetitle">Athletic</div>
+  <img src="http://www.partnersinprevention.us/images/images/Nike-Mens-Running-Shoes-Nike-Roshe-Run-grey-black_2.jpg" width="550" height="350">
+</div>
+
+<div class= "shoeslideshow">
+  <!--Mens Slippers-->
+  <div class="shoetitle">Slippers</div>
+  <img src = "https://content.backcountry.com/images/items/900/SRL/SRL0059/MAR.jpg" width="350" height="350">
+</div>
+
+<div class="shoeslideshow">
+  <!--Mens Hiking Shoes-->
+  <div class="shoetitle">Hiking</div>
+  <img src="https://content.backcountry.com/images/items/900/VSQ/VSQ0192/BEL.jpg" width="350" height="350">
+</div>
+
+<div class="shoeslideshow">
+  <!--Mens Dress Shoes-->
+  <div class="shoetitle">Dress</div>
+  <img src="https://images-na.ssl-images-amazon.com/images/I/61yIFH1EV5L._UY395_.jpg" width="350" height="350">
+</div>
+
+<div class="shoeslideshow">
+  <!--Mens Western-->
+  <div class="shoetitle">Western</div>
+  <img src="https://i.ebayimg.com/images/g/GR0AAOSwiWlZxNqY/s-l300.jpg" width="350" height="350">
+</div>
+
+<button id="left" onclick="plusDivs(-1)">&#10094;</button>
+<button id="right" onclick="plusDivs(+1)">&#10095;</button>
+</body>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("shoeslideshow");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+}
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yes</title>
+</head>
+
+<style>
+.slider {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    from {
+        font-size: 32px;
+        color: black;
+    }
+    to {
+        font-size: 320px;
+        color:red;
+    }
+}
+</style>
+
+<script>
+function hello() {
+    document.getElementById("main").className = 'slider';
+}
+
+</script>
+
+<body>
+    <h1 id="main">YES!</h1>
+    <button onclick="hello()">Click me</button>
+</body>
+
+</html>

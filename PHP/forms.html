@@ -1,0 +1,13 @@
+<html>
+<details id= "details">
+  <summary id="change"> hayeet</summary>
+  <p onclick="change()"> now you see me </p>
+</details>
+<script>
+function change(){
+  document.getElementById("change").innerHTML = "Now you dont"
+  document.getElementById("details").removeAttribute("open")
+}
+</script>
+
+</html>

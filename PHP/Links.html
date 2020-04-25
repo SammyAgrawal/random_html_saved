@@ -1,0 +1,24 @@
+<html>
+<body>
+  <div id="links">
+    <a href="https://groton.myschoolapp.com/app/student#studentmyday/schedule"> Link 1</a> <br>
+    <a href="https://mycourses.cty.jhu.edu/login/index.php"> Link 2</a> <br>
+
+  </div>
+  <button onclick="new_link()"> Add new Link</button>
+</body>
+
+<script>
+  function new_link(){
+    a = document.createElement("a");
+    var link = String(prompt("Enter Link"));
+    a.href = link
+    a.appendChild(document.createTextNode(link))
+    document.getElementById("links").appendChild(a);
+    br= document.createElement("br");
+        document.getElementById("links").appendChild(br)
+  }
+
+
+</script>
+</html>
